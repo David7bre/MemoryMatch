@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Backgrounds */
+  --bg-main: #0f172a; /* app background */
+  --bg-panel: #1e293b; /* paneli */
+  --bg-soft: #334155; /* kartice / sekcije */
+  --bg-softer: #475569; /* hover bg */
+  --bg-inset: #020617; /* notranji shadow / modali */
+
+  /* Text */
+  --text-main: #e5e7eb; /* glavni tekst */
+  --text-muted: #94a3b8; /* manj pomembno */
+  --text-soft: #cbd5f5; /* tooltipi */
+  --text-inverse: #020617; /* na svetlih bg-jih */
+  --text-disabled: #64748b;
+
+  /* Borders & outlines */
+  --border-main: #334155;
+  --border-soft: #475569;
+  --border-strong: #64748b;
+  --outline: #64748b;
+
+  /* States */
+  --success: #22c55e;
+  --warning: #eab308;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  /* Highlights / focus */
+  --highlight: #f472b6;
+  --highlight-soft: #f9a8d4;
+  --focus-ring: #22d3ee;
+
+  /* Pastel colors – vector images (8) */
+  --vector-blue: #bfdbfe;
+  --vector-cyan: #a5f3fc;
+  --vector-green: #bbf7d0;
+  --vector-yellow: #fef9c3;
+  --vector-orange: #fed7aa;
+  --vector-pink: #fbcfe8;
+  --vector-purple: #e9d5ff;
+  --vector-teal: #99f6e4;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-main);
+}
+
+.main-layout {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  grid-template-rows: auto auto 600px;
+  grid-template-areas:
+    'header header'
+    'menu rules'
+    'main rules';
+  gap: 15px;
+}

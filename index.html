@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <link rel="stylesheet" href="./src/css/game.css" />
+    <script src="./src/js/init.js" type="module"></script>
+  </head>
+  <body>
+    <div class="main-layout">
+      <div class="header">
+        <h1>Spomin</h1>
+      </div>
+      <div class="menu">
+        <div class="select-difficulty">
+          <span>Izberi težavnost:</span>
+          <select name="difficulty" class="select-difficulty-input" id="select-difficulty-input">
+            <option selected disabled value="">---||---</option>
+            <option value="0">2 para</option>
+            <option value="1">4 pari</option>
+            <option value="2">8 parov</option>
+          </select>
+        </div>
+        <div class="time-display">
+          <span class="time-display-span">00:00</span>
+        </div>
+      </div>
+      <div class="main">
+        <div class="game-container">
+          <div class="grid-container">
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+            <div class="card">s</div>
+          </div>
+        </div>
+      </div>
+      <div class="rules">
+        <h1>Potek Igre</h1>
+        <p>
+          Cilj igre Spomin je poiskati vse pare enakih slik. Najprej izberi težavnost igre – lahko
+          se odločiš za 4, 6 ali 8 parov kart. Ko klikneš na gumb za začetek igre, se karte
+          naključno premešajo in igra se začne.
+        </p>
+        <p>
+          S klikom na karto jo obrneš. Nato izbereš še drugo karto. Če sta sliki enaki, po dveh
+          sekundah izginejo iz igralnega polja. Če sta različni, se karti po dveh sekundah ponovno
+          zapreta. Vsako odpiranje dveh kart se šteje kot en klik.
+        </p>
+        <p>
+          Čas igranja se začne meriti ob prvem odpiranju karte. Med igro se sproti prikazujejo
+          porabljen čas, število klikov in število pravilno najdenih parov.
+        </p>
+        <p>
+          Igra se zaključi, ko odkriješ zadnji par, ob tem pa se prikaže obvestilo o uspešnem
+          zaključku. Med igranjem se predvaja glasba v ozadju, ki jo lahko po želji vklopiš ali
+          izklopiš. Ob vsakem novem začetku igre se glasba znova zažene.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
