@@ -30,36 +30,117 @@
     justify-content: center;
 
     span {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       font-size: 1.3rem;
       font-weight: bold;
     }
 
-    select {
-      height: 30px;
+    .difficulty-options {
+      display: flex;
       width: 100%;
-      border: 1px solid var(--border-strong);
-      border-radius: 5px;
-      background-color: var(--bg-softer);
-      color: var(--text-soft);
-      font-weight: bold;
-      text-align: center;
-      outline: none;
+      flex-direction: row;
+      align-items: space-between;
+      justify-content: center;
+      gap: 5px;
+
+      input[type='radio'] {
+        display: none;
+
+        & + label {
+          cursor: pointer;
+          opacity: 0.6;
+        }
+
+        &:checked + label {
+          opacity: 1;
+        }
+      }
+
+      label {
+        display: block;
+        padding: 5px 15px;
+        border-radius: 5px;
+
+        &.easy-btn {
+          background-color: var(--success);
+        }
+
+        &.medium-btn {
+          background-color: var(--warning);
+        }
+
+        &.hard-btn {
+          background-color: var(--error);
+        }
+      }
     }
   }
 
-  .time-display {
+  .left-menu {
     display: flex;
     height: 100%;
-    padding: 5px 20px;
-    border-radius: 10px;
-    background-color: var(--bg-inset);
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+    gap: 10px;
 
-    .time-display-span {
-      font-size: 3rem;
-      font-weight: bold;
+    .clicks-display {
+      position: relative;
+      display: flex;
+      height: 100%;
+      padding: 5px 20px;
+      border-radius: 10px;
+      background-color: var(--bg-inset);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .clicks-header {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      .clicks-display-span {
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+    }
+
+    .pairs-display {
+      position: relative;
+      display: flex;
+      height: 100%;
+      padding: 5px 20px;
+      border-radius: 10px;
+      background-color: var(--bg-inset);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .pairs-header {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      .pairs-display-span {
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+    }
+
+    .time-display {
+      display: flex;
+      height: 100%;
+      padding: 5px 20px;
+      border-radius: 10px;
+      background-color: var(--bg-inset);
+      align-items: center;
+      justify-content: center;
+
+      .time-display-span {
+        font-size: 3rem;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -84,13 +165,24 @@
       display: grid;
       gap: 10px;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, 1fr);
 
       .card {
+        display: flex;
         height: 80px;
         width: 80px;
         border: 1px solid var(--border-soft);
         border-radius: 10px;
+        font-size: 2rem;
+        justify-content: center;
+        align-items: center;
+
+        &.card-back::before {
+          content: '❓';
+        }
+
+        &.card-front::before {
+          content: ' ';
+        }
       }
     }
   }

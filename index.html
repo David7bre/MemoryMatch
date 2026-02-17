@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./src/css/main.css" />
     <link rel="stylesheet" href="./src/css/game.css" />
     <script src="./src/js/init.js" type="module"></script>
+    <script src="./src/js/populate-board.js" type="module"></script>
   </head>
   <body>
     <div class="main-layout">
@@ -14,37 +15,32 @@
       <div class="menu">
         <div class="select-difficulty">
           <span>Izberi težavnost:</span>
-          <select name="difficulty" class="select-difficulty-input" id="select-difficulty-input">
-            <option selected disabled value="">---||---</option>
-            <option value="0">2 para</option>
-            <option value="1">4 pari</option>
-            <option value="2">8 parov</option>
-          </select>
+          <div class="difficulty-options">
+            <input type="radio" name="difficulty" value="easy" id="easy" checked />
+            <label for="easy" class="easy-btn">Easy</label>
+            <input type="radio" name="difficulty" value="medium" id="medium" />
+            <label for="medium" class="medium-btn">Medium</label>
+            <input type="radio" name="difficulty" value="hard" id="hard" />
+            <label for="hard" class="hard-btn">Hard</label>
+          </div>
         </div>
-        <div class="time-display">
-          <span class="time-display-span">00:00</span>
+        <div class="left-menu">
+          <div class="pairs-display">
+            <span class="pairs-header">Pari:</span>
+            <span class="pairs-display-span">123</span>
+          </div>
+          <div class="clicks-display">
+            <span class="clicks-header">Kliki:</span>
+            <span class="clicks-display-span">123</span>
+          </div>
+          <div class="time-display">
+            <span class="time-display-span">00:00</span>
+          </div>
         </div>
       </div>
       <div class="main">
         <div class="game-container">
-          <div class="grid-container">
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-            <div class="card">s</div>
-          </div>
+          <div class="grid-container" id="grid-container"></div>
         </div>
       </div>
       <div class="rules">
