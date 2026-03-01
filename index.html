@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Memory Match</title>
@@ -27,11 +27,11 @@
         <div class="left-menu">
           <div class="pairs-display">
             <span class="pairs-header">Pari:</span>
-            <span class="pairs-display-span">123</span>
+            <span class="pairs-display-span">0</span>
           </div>
           <div class="clicks-display">
             <span class="clicks-header">Kliki:</span>
-            <span class="clicks-display-span">123</span>
+            <span class="clicks-display-span">0</span>
           </div>
           <div class="time-display">
             <span class="time-display-span">00:00</span>
@@ -41,14 +41,17 @@
       <div class="main">
         <div class="game-container">
           <div class="grid-container" id="grid-container"></div>
+          <div class="reset-game-container hidden">
+            <span>Čestitke! Uspešno si zaključil igro.</span>
+            <button class="reset-game-btn">Začni novo igro</button>
+          </div>
         </div>
       </div>
       <div class="rules">
         <h1>Potek Igre</h1>
         <p>
           Cilj igre Spomin je poiskati vse pare enakih slik. Najprej izberi težavnost igre – lahko
-          se odločiš za 4, 6 ali 8 parov kart. Ko klikneš na gumb za začetek igre, se karte
-          naključno premešajo in igra se začne.
+          se odločiš za 4, 6 ali 8 parov kart. Igro pričneš s klikom na poljubno karto.
         </p>
         <p>
           S klikom na karto jo obrneš. Nato izbereš še drugo karto. Če sta sliki enaki, po dveh

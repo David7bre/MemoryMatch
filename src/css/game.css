@@ -166,22 +166,67 @@
       gap: 10px;
       grid-template-columns: repeat(4, 1fr);
 
+      &.hidden {
+        display: none;
+      }
       .card {
         display: flex;
         height: 80px;
         width: 80px;
         border: 1px solid var(--border-soft);
+        background-color: var(--bg-inset);
         border-radius: 10px;
         font-size: 2rem;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        user-select: none;
+        transition:
+          transform 0.3s,
+          font-size 0.1s,
+          visibility 0.3s;
 
-        &.card-back::before {
-          content: '❓';
+        &.closed {
+          font-size: 0;
+          transform: rotateY(180deg);
+          background-image: radial-gradient(var(--bg-inset), var(--bg-main));
         }
 
-        &.card-front::before {
-          content: ' ';
+        &.matched {
+          pointer-events: none;
+          visibility: hidden;
+        }
+      }
+    }
+
+    .reset-game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &.hidden {
+        display: none;
+      }
+
+      span {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .reset-game-btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: var(--bg-soft);
+        color: var(--text-inverse);
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+          background-color: var(--border-soft);
         }
       }
     }
